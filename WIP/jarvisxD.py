@@ -2,20 +2,12 @@ import pyttsx3 #voice engine import
 import datetime
 import speech_recognition as sr
 
-
 engine = pyttsx3.init()
 
 
 def speak (audio):
     engine.say(audio)
     engine.runAndWait()
-  
-  
-speak("Hola, soy Ela. Su asistente personal.")
-
-def time():
-    time = datetime.datetime.now().strftime("%H:%M:%S")
-    speak(time)
 
 def date():
     year = int(datetime.datetime.now().year)
@@ -26,18 +18,15 @@ def date():
     speak(date)
 
 
-def wishme():
-    speak("Bienvenido")
-    speak("la hora actual es:")
-    time()   
+def wishme(): 
     hour = datetime.datetime.now().hour
     if hour >= 6 and hour < 12:
-        speak("Buen dia")
+        speak("Good morning")
     elif hour >= 12 and hour < 18:
-        speak("Buenas tardes")
+        speak("Good afternoon")
     elif hour >= 18 and hour < 24:
-        speak("Buenas noches")
-    speak("Estoy a tu servicio")
+        speak("Good night")
+    speak("I'm at your service")
 
 wishme()
 

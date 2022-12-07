@@ -6,7 +6,6 @@ import qrcode
 root = tk.Tk()
 root.geometry("1240x720")
 root.configure(background='black')
-root.iconbitmap("C:/Users/lnove/Desktop/PY Projects/QR.py/icon.ico")
 tk.Wm.wm_title(root, "QR GENERATOR")
 
 

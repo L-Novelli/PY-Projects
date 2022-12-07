@@ -7,9 +7,6 @@ root = tk.Tk()
 root.geometry("1240x720")
 root.configure(background='black')
 tk.Wm.wm_title(root, "QR GENERATOR")
-
-
-
     
 def Link():
     data = entry1.get() 

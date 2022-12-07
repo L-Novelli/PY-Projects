@@ -46,33 +46,38 @@ def Save():
 mainFrame = ttk.Frame(root, style='Frame.TFrame')
 mainFrame.grid(row = 0, column = 0, sticky = 'NEWS')
 
+label0 = ttk.Label(mainFrame, text = "Link for the QR")
+label0.grid(row = 0, column = 1, padx = 10, pady = 15,  sticky = 'WE')
+
 label1 = ttk.Entry(mainFrame, text = 'enter the link for the QR: ', font=('Mistral', 18, 'bold'))
-label1.grid(row = 0, column = 1, padx = 10, pady = 15,  sticky = 'WE')
-
-entry1 = ttk.Entry(mainFrame)
-entry1.grid(row = 0, column = 1, padx = 10, pady = 15, sticky = 'NSEW')
-
-button1 = ttk.Button(mainFrame, text = "ADD", command = Link)
-button1.grid(row = 0, column = 2, padx = 5, pady = 15, sticky = 'NSEW')
-
-status1 = ttk.Label(mainFrame, text = "Waiting for input")
-status1.grid(row = 0, column = 3, padx = 10, pady = 15, sticky = 'NSEW')
-  
-
-label2 = ttk.Entry(mainFrame, text = 'enter que QR name ', font=('Mistral', 18, 'bold'))
 label1.grid(row = 1, column = 1, padx = 10, pady = 15,  sticky = 'WE')
 
+entry1 = ttk.Entry(mainFrame)
+entry1.grid(row = 1, column = 1, padx = 10, pady = 15, sticky = 'NSEW')
+
+button1 = ttk.Button(mainFrame, text = "ADD", command = Link)
+button1.grid(row = 1, column = 2, padx = 5, pady = 15, sticky = 'NSEW')
+
+status1 = ttk.Label(mainFrame, text = "Waiting for input")
+status1.grid(row = 1, column = 3, padx = 10, pady = 15, sticky = 'NSEW')
+  
+label0 = ttk.Label(mainFrame, text = "QR name")
+label0.grid(row = 2, column = 1, padx = 10, pady = 15,  sticky = 'WE')
+
+label2 = ttk.Entry(mainFrame, text = 'enter que QR name ', font=('Mistral', 18, 'bold'))
+label1.grid(row = 3, column = 1, padx = 10, pady = 15,  sticky = 'WE')
+
 entry2 = ttk.Entry(mainFrame)
-entry2.grid(row = 1, column = 1, padx = 10, pady = 15, sticky = 'NSEW')
+entry2.grid(row = 3, column = 1, padx = 10, pady = 15, sticky = 'NSEW')
 
 button2 = ttk.Button(mainFrame, text = "ADD", command = Name)
-button2.grid(row = 1, column = 2, padx = 5, pady = 15, sticky = 'NSEW')
+button2.grid(row = 3, column = 2, padx = 5, pady = 15, sticky = 'NSEW')
 
 status2 = ttk.Label(mainFrame, text = "Waiting for input")
-status2.grid(row = 1, column = 3, padx = 10, pady = 15, sticky = 'NSEW')
+status2.grid(row = 3, column = 3, padx = 10, pady = 15, sticky = 'NSEW')
 
 button3 = ttk.Button(mainFrame, text = "Save", command = lambda:Save())
-button3.grid(row = 3, column = 1, padx = 10, pady = 15, sticky = 'NSEW')
+button3.grid(row = 4, column = 1, padx = 10, pady = 15, sticky = 'NSEW')
   
 root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight = 1)

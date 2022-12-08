@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import ttk
+from tkinter import messagebox
 import tkinter as tk
 import qrcode
 
@@ -37,10 +38,7 @@ def Save():
     name = entry2.get()
     img = qrcode.make(Link())
     img.save(f'{name}.png')
-    top= Toplevel(root)
-    top.geometry("250x250")
-    top.title("Message")
-    l = Label(top, text= "QR saved", font=('Mistral 18 bold')).place(x=125,y=125)
+    messagebox.showinfo("QR Generator", f"\tSuccess! \n Your QR code for '{name}' has been saved.")
     
   
 mainFrame = ttk.Frame(root, style='Frame.TFrame')

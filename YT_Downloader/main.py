@@ -7,7 +7,7 @@ yt = YouTube(link)
 
 
 print(f'Title: {yt.title}')
-print(f'View: {yt.views}')
 
 yd = yt.streams.get_highest_resolution()
 yd.download('YT_Downloader\downloads')
+print(f'Te video "{yt.title}" has been successfully downloaded from YouTube')
